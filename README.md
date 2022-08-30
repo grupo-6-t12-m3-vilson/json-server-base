@@ -134,7 +134,7 @@ Caso dê tudo certo, irá retornar
 }
 ```
 
-`POST /users/:id/videos`
+`GET /users/:id/videos`
 
 > Authorization: Bearer {token}
 
@@ -146,10 +146,17 @@ Caso dê tudo certo, irá retornar
 [
   {
     "url": "https://demos-kenzie-academy-brasil.s3.amazonaws.com/mar22/m3/Sprint_1/GMT20220719-123327_Recording_1760x900.mp4",
-    "bookmarks": "02:48, 15:25",
-    "title": "Abordando sobre useEffect, Abordando sobre useState",
-    "userId": 4,
+    "bookmarks": "15:25",
+    "title": "Falando sobre churros",
+    "userId": 2,
     "id": 1
+  },
+  {
+    "url": "https://demos-kenzie-academy-brasil.s3.amazonaws.com",
+    "bookmarks": "10:00, 29:00",
+    "title": "Falando sobre churros, Aprendendo a fazer churros",
+    "userId": 2,
+    "id": 2
   }
 ]
 ```
