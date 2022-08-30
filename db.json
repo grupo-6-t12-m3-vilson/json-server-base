@@ -12,6 +12,12 @@
       "password": "$2a$10$8DKEi3y79/MUeI20UD6EFuoRDCMYwFUmeg1OWwXIakydT9eTBVYf2",
       "module": "M3",
       "id": 2
+    },
+    {
+      "email": "user3@email.com",
+      "password": "$2a$10$WFDMrkc4zOmAh2C1nVwUYuQsi9t9cZ/8f2xg0sWsDJ5nAta/4K6ge",
+      "module": "M3",
+      "id": 3
     }
   ]
 }
