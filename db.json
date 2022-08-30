@@ -8,36 +8,25 @@
       "id": 1
     },
     {
-      "email": "user@email.com",
-      "password": "$2a$10$8DKEi3y79/MUeI20UD6EFuoRDCMYwFUmeg1OWwXIakydT9eTBVYf2",
-      "module": "M3",
+      "email": "instrutor@email.com",
+      "password": "$2a$10$rOZ1tQOPMpCfFmCYTB/d8uGv60hutISTj7S69SLV.GdSyfK3WW/qK",
+      "module": "2",
       "id": 2
-    },
-    {
-      "email": "user3@email.com",
-      "password": "$2a$10$WFDMrkc4zOmAh2C1nVwUYuQsi9t9cZ/8f2xg0sWsDJ5nAta/4K6ge",
-      "module": "M3",
-      "id": 3
-    },
-    {
-      "email": "use2r@email.com",
-      "password": "$2a$10$RUMJVKdaXqlOQSO7KStw0O51/QbnwoaN8AZD/Vo9Qw2ljguglE2FO",
-      "module": "M3",
-      "id": 4
-    },
-    {
-      "email": "igor@email.com",
-      "password": "$2a$10$YoUNCnq65fbKfEv5YzzeE.7o3u6nJfww1ZmG8uetq5Te9SM8.4MtW",
-      "module": "M3",
-      "id": 5
     }
   ],
   "videos": [
     {
       "url": "https://demos-kenzie-academy-brasil.s3.amazonaws.com/mar22/m3/Sprint_1/GMT20220719-123327_Recording_1760x900.mp4",
       "bookmarks": "15:25",
-      "title": "Abordando sobre useState",
-      "userId": 4,
+      "title": "Falando sobre churros",
+      "userId": 2,
+      "id": 1
+    },
+    {
+      "url": "https://demos-kenzie-academy-brasil.s3.amazonaws.com",
+      "bookmarks": "10:00, 29:00",
+      "title": "Falando sobre churros, Aprendendo a fazer churros",
+      "userId": 2,
       "id": 2
     }
   ]
