@@ -22,19 +22,20 @@ POST /signin
 
 Qualquer um desses 2 endpoints pode ser usado para realizar login com um dos usuários cadastrados na lista de "Users"
 
-<h2 align ='center'> Criação de usuário </h2>
+<h2 align ='center'> Login usuário </h2>
 
-`POST /signup - FORMATO DA RESPOSTA - STATUS 200`
+`POST /login`
 
 ```json
 {
   "email": "user@email.com",
-  "password": "senha123",
-  "module": "M3"
+  "password": "senha123"
 }
 ```
 
 Caso dê tudo certo, a resposta será assim:
+
+`FORMATO DA RESPOSTA - STATUS 200`
 
 ```json
 {
@@ -49,14 +50,23 @@ Caso dê tudo certo, a resposta será assim:
 
 <h2 align ='center'> Possíveis erros </h2>
 
-Caso o e-mail já tenha sido cadastrado
+Caso o e-mail esteja errado
 
-`POST /signup - `
 ` FORMATO DA RESPOSTA - STATUS 400`
 
 ```json
 {
-"Email already exists"
+"Cannot find user"
+}
+```
+
+Caso a senha esteja errado
+
+` FORMATO DA RESPOSTA - STATUS 400`
+
+```json
+{
+"Incorrect password"
 }
 ```
 
@@ -71,7 +81,15 @@ Rotas que necessitam de autorização deve ser informado no cabeçalho da requis
 Após o usuário estar logado, ele deve conseguir postar videos e excluir videos. Assim como adicionar marcadores,
 editar marcadores e deletar marcadores
 
-`GET /signup/:id - FORMATO DA RESPOSTA - STATUS 200`
+`GET /users/:id -`
+
+```json
+{
+ "Não há necessidade de passar nada como parametro"
+}
+```
+
+`FORMATO DA RESPOSTA - STATUS 200`
 
 ```json
 {
@@ -86,7 +104,7 @@ editar marcadores e deletar marcadores
 
 Caso não tenha informado o token, irá retornar:
 
-`GET /signup/:id - FORMATO DA RESPOSTA - STATUS 401`
+`FORMATO DA RESPOSTA - STATUS 401`
 
 ```json
 {
@@ -96,8 +114,101 @@ Caso não tenha informado o token, irá retornar:
 
 Caso não tenha sido informado o ID
 
-`GET /signup/ - FORMATO DA RESPOSTA - STATUS 403`
+`FORMATO DA RESPOSTA - STATUS 403`
 
 ```json
 {"Private resource access: entity must have a reference to the owner id"}
+```
+
+<h2 align ='center'> Cadastrar vídeos </h2>
+
+Rotas que necessitam de autorização deve ser informado no cabeçalho da requisição o campo "Authorization", dessa forma:
+
+> Authorization: Bearer {token}
+
+`POST /videos/`
+
+```json
+{
+  "url": "https://demos-kenzie-academy-brasil.s3.amazonaws.com/mar22/m3/Sprint_1/GMT20220719-123327_Recording_1760x900.mp4",
+  "bookmarks": "02:48, 15:25",
+  "title": "Abordando sobre useEffect, Abordando sobre useState",
+  "userId": 4
+}
+```
+
+Caso dê tudo certo, irá retornar
+
+`FORMATO DA RESPOSTA - STATUS 201`
+
+```json
+{
+  "url": "https://demos-kenzie-academy-brasil.s3.amazonaws.com/mar22/m3/Sprint_1/GMT20220719-123327_Recording_1760x900.mp4",
+  "bookmarks": "02:48, 15:25",
+  "title": "Abordando sobre useEffect, Abordando sobre useState",
+  "userId": 4,
+  "id": 1
+}
+```
+
+`POST /users/:id/videos`
+
+> Authorization: Bearer {token}
+
+Caso dê tudo certo, irá retornar
+
+`FORMATO DA RESPOSTA - STATUS 200`
+
+```json
+[
+  {
+    "url": "https://demos-kenzie-academy-brasil.s3.amazonaws.com/mar22/m3/Sprint_1/GMT20220719-123327_Recording_1760x900.mp4",
+    "bookmarks": "02:48, 15:25",
+    "title": "Abordando sobre useEffect, Abordando sobre useState",
+    "userId": 4,
+    "id": 1
+  }
+]
+```
+
+`PATCH /videos/:idVideo`
+
+> Authorization: Bearer {token}
+
+```json
+{
+  "bookmarks": "03:48, 15:25"
+}
+```
+
+Caso dê tudo certo, irá retornar
+
+`FORMATO DA RESPOSTA - STATUS 200`
+
+```json
+[
+  {
+    "url": "https://demos-kenzie-academy-brasil.s3.amazonaws.com/mar22/m3/Sprint_1/GMT20220719-123327_Recording_1760x900.mp4",
+    "bookmarks": "03:48, 15:25",
+    "title": "Abordando sobre useEffect, Abordando sobre useState",
+    "userId": 4,
+    "id": 1
+  }
+]
+```
+
+`DELETE /videos/:idVideo`
+
+> Authorization: Bearer {token}
+
+```json
+{}
+```
+
+Caso dê tudo certo, irá retornar
+
+`FORMATO DA RESPOSTA - STATUS 200`
+
+```json
+{}
 ```
