@@ -1,5 +1,6 @@
 {
   "users": 600,
-  "videos": 640,
+  "videos": 644,
+  "videos/:userId": 644,
   "users/:userId/videos": "/videos/:userId"
 }
