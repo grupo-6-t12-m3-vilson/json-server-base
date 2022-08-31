@@ -5,13 +5,17 @@ POST /signin
 
 Qualquer um desses 2 endpoints pode ser usado para realizar login com um dos usuários cadastrados na lista de "Users"
 
+<h2 align ='start'> API </h2>
+
+https://api-time-stamp.herokuapp.com
+
 <h2 align ='center'> Login usuário </h2>
 
 `POST /login`
 
 ```json
 {
-  "email": "user@email.com",
+  "email": "user@mail.com",
   "password": "senha123"
 }
 ```
@@ -22,11 +26,12 @@ Caso dê tudo certo, a resposta será assim:
 
 ```json
 {
-  "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXJAZW1haWwuY29tIiwiaWF0IjoxNjYxODc0MjI1LCJleHAiOjE2NjE4Nzc4MjUsInN1YiI6IjIifQ.2hITQNNZqC9WDTiR-QiaawfMteWAtshTdklwnifNfn8",
+  "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imluc3RydXRvckBtYWlsLmNvbSIsImlhdCI6MTY2MTk0ODEzMiwiZXhwIjoxNjYxOTUxNzMyLCJzdWIiOiIzIn0.7zzLwKWHqtefUneP5JhyIp-iVFVFwtIw8_L5C21sw8U",
   "user": {
-    "email": "user@email.com",
-    "module": "3",
-    "id": 2
+    "email": "instrutor@mail.com",
+    "name": "Naruto",
+    "age": 38,
+    "id": 3
   }
 }
 ```
@@ -53,16 +58,104 @@ Caso a senha esteja errado
 }
 ```
 
-<h2 align ='center'> Acessar usuário </h2>
+<h2 align ='center'> Mostrar vídeos </h2>
+
+`GET /videos`
+
+Retorna todos os videos criados, por todos os usuarios
+
+```json
+[
+  {
+    "url": "https://demos-kenzie-academy-brasil.s3.amazonaws.com/mar22/m3/Sprint_1/GMT20220719-123327_Recording_1760x900.mp4",
+    "userId": 1,
+    "marks ": [
+      {
+        "time_video": "02:30",
+        "title": "react-js222"
+      },
+      {
+        "time_video": "04:30",
+        "title": "json-server"
+      }
+    ],
+    "id": 1
+  },
+  {
+    "url": "https://demos-kenzie-academy-brasil.s3.amazonaws.com/mar22/m3/Sprint_1/GMT20220719-123327_Recording_1760x900.mp4",
+    "sprint": 1,
+    "userId": 2,
+    "day": "friday",
+    "isExtra": false,
+    "marks ": [],
+    "id": 3
+  },
+  {
+    "url": "https://demos-kenzie-academy-brasil.s3.amazonaws.com/mar22/m3/Sprint_1/GMT20220719-123327_Recording_1760x900.mp4",
+    "userId": 3,
+    "marks ": [
+      {
+        "time_video": "04:25",
+        "title": "react-js222"
+      },
+      {
+        "time_video": "10:15",
+        "title": "json-server"
+      }
+    ],
+    "id": 8
+  }
+]
+```
+
+`GET /videos?userId=:userId`
+
+Retorna todos os videos criados pelo usuario sem necessidade de autorização
+
+```json
+[
+  {
+    "url": "https://demos-kenzie-academy-brasil.s3.amazonaws.com/mar22/m3/Sprint_1/GMT20220719-123327_Recording_1760x900.mp4",
+    "userId": 3,
+    "marks ": [
+      {
+        "time_video": "04:25",
+        "title": "react-js222"
+      },
+      {
+        "time_video": "10:15",
+        "title": "json-server"
+      }
+    ],
+    "id": 5
+  },
+  {
+    "url": "https://demos-kenzie-academy-brasil.s3.amazonaws.com/mar22/m3/Sprint_1/GMT20220719-123327_Recording_1760x900.mp4",
+    "userId": 3,
+    "marks ": [
+      {
+        "time_video": "04:25",
+        "title": "react-js222"
+      },
+      {
+        "time_video": "10:15",
+        "title": "json-server"
+      }
+    ],
+    "id": 6
+  }
+]
+```
 
 ## Rotas que necessitam de autorização
+
+A partir daqui, todas as rotas necessitam de autenticação
 
 Rotas que necessitam de autorização deve ser informado no cabeçalho da requisição o campo "Authorization", dessa forma:
 
 > Authorization: Bearer {token}
 
-Após o usuário estar logado, ele deve conseguir postar videos e excluir videos. Assim como adicionar marcadores,
-editar marcadores e deletar marcadores
+<h2 align ='center'> Acessar usuário </h2>
 
 `GET /users/:id -`
 
@@ -105,38 +198,46 @@ Caso não tenha sido informado o ID
 
 <h2 align ='center'> Cadastrar vídeos </h2>
 
-Rotas que necessitam de autorização deve ser informado no cabeçalho da requisição o campo "Authorization", dessa forma:
-
-> Authorization: Bearer {token}
-
-`POST /videos/`
+`POST /videos`
 
 ```json
 {
   "url": "https://demos-kenzie-academy-brasil.s3.amazonaws.com/mar22/m3/Sprint_1/GMT20220719-123327_Recording_1760x900.mp4",
-  "bookmarks": "02:48, 15:25",
-  "title": "Abordando sobre useEffect, Abordando sobre useState",
-  "userId": 4
+  "userId": 3,
+  "marks ": [
+    {
+      "time_video": "04:25",
+      "title": "react-js222"
+    },
+    {
+      "time_video": "10:15",
+      "title": "json-server"
+    }
+  ]
 }
 ```
-
-Caso dê tudo certo, irá retornar
 
 `FORMATO DA RESPOSTA - STATUS 201`
 
 ```json
 {
   "url": "https://demos-kenzie-academy-brasil.s3.amazonaws.com/mar22/m3/Sprint_1/GMT20220719-123327_Recording_1760x900.mp4",
-  "bookmarks": "02:48, 15:25",
-  "title": "Abordando sobre useEffect, Abordando sobre useState",
-  "userId": 4,
-  "id": 1
+  "userId": 3,
+  "marks ": [
+    {
+      "time_video": "04:25",
+      "title": "react-js222"
+    },
+    {
+      "time_video": "10:15",
+      "title": "json-server"
+    }
+  ],
+  "id": 5
 }
 ```
 
 `GET /users/:id/videos`
-
-> Authorization: Bearer {token}
 
 Caso dê tudo certo, irá retornar
 
@@ -146,24 +247,38 @@ Caso dê tudo certo, irá retornar
 [
   {
     "url": "https://demos-kenzie-academy-brasil.s3.amazonaws.com/mar22/m3/Sprint_1/GMT20220719-123327_Recording_1760x900.mp4",
-    "bookmarks": "15:25",
-    "title": "Falando sobre churros",
     "userId": 2,
-    "id": 1
-  },
-  {
-    "url": "https://demos-kenzie-academy-brasil.s3.amazonaws.com",
-    "bookmarks": "10:00, 29:00",
-    "title": "Falando sobre churros, Aprendendo a fazer churros",
+    "marks ": [
+      {
+        "time_video": "04:25",
+        "title": "react-js222"
+      },
+      {
+        "time_video": "10:15",
+        "title": "json-server"
+      }
+    ],
+    "id": 4
+  }
+    {
+    "url": "https://demos-kenzie-academy-brasil.s3.amazonaws.com/mar22/m3/Sprint_1/GMT20220719-123327_Recording_1760x900.mp4",
     "userId": 2,
-    "id": 2
+    "marks ": [
+      {
+        "time_video": "14:25",
+        "title": "react-js252"
+      },
+      {
+        "time_video": "19:15",
+        "title": "json-auth"
+      }
+    ],
+    "id": 5
   }
 ]
 ```
 
 `PATCH /videos/:idVideo`
-
-> Authorization: Bearer {token}
 
 ```json
 {
@@ -188,8 +303,6 @@ Caso dê tudo certo, irá retornar
 ```
 
 `DELETE /videos/:idVideo`
-
-> Authorization: Bearer {token}
 
 ```json
 {}
