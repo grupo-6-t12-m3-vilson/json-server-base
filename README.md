@@ -68,43 +68,75 @@ Retorna todos os videos criados, por todos os usuarios
 ```json
 [
   {
-    "url": "https://demos-kenzie-academy-brasil.s3.amazonaws.com/mar22/m3/Sprint_1/GMT20220719-123327_Recording_1760x900.mp4",
+    "url": "https://demos-kenzie-academy-brasil.s3.amazonaws.com/mar22/m3/Sprint_1/GMT20220718-123537_Recording_1920x1080.mp4",
+    "sprintId": 2,
+    "day": "segunda",
+    "extra": false,
+    "moduleId": 3,
     "userId": 1,
-    "marks ": [
+    "created_at": "18/07/22",
+    "updated_at": "05/09/22",
+    "marks": [
       {
+        "id": "1",
         "time_video": "02:30",
         "title": "react-js222"
       },
       {
+        "id": 2,
         "time_video": "04:30",
         "title": "json-server"
       }
     ],
     "id": 1
-  },
+  }
+
   {
-    "url": "https://demos-kenzie-academy-brasil.s3.amazonaws.com/mar22/m3/Sprint_1/GMT20220719-123327_Recording_1760x900.mp4",
-    "sprint": 1,
+    "url": "https://demos-kenzie-academy-brasil.s3.amazonaws.com/mar22/m3/Sprint_1/GMT20220718-123537_Recording_1920x1080.mp4",
+    "sprintId": 2,
+    "day": "segunda",
+    "extra": false,
+    "moduleId": 3,
     "userId": 2,
-    "day": "friday",
-    "isExtra": false,
-    "marks ": [],
-    "id": 3
-  },
-  {
-    "url": "https://demos-kenzie-academy-brasil.s3.amazonaws.com/mar22/m3/Sprint_1/GMT20220719-123327_Recording_1760x900.mp4",
-    "userId": 3,
-    "marks ": [
+    "created_at": "18/07/22",
+    "updated_at": "05/09/22",
+    "marks": [
       {
-        "time_video": "04:25",
+        "id": "1",
+        "time_video": "02:30",
         "title": "react-js222"
       },
       {
-        "time_video": "10:15",
+        "id": 2,
+        "time_video": "04:30",
         "title": "json-server"
       }
     ],
-    "id": 8
+    "id": 2
+  }
+
+  {
+    "url": "https://demos-kenzie-academy-brasil.s3.amazonaws.com/mar22/m3/Sprint_1/GMT20220718-123537_Recording_1920x1080.mp4",
+    "sprintId": 2,
+    "day": "segunda",
+    "extra": false,
+    "moduleId": 3,
+    "userId": 3,
+    "created_at": "18/07/22",
+    "updated_at": "05/09/22",
+    "marks": [
+      {
+        "id": "1",
+        "time_video": "02:30",
+        "title": "react-js222"
+      },
+      {
+        "id": 2,
+        "time_video": "04:30",
+        "title": "json-server"
+      }
+    ],
+    "id": 2
   }
 ]
 ```
@@ -116,34 +148,51 @@ Retorna todos os videos criados pelo usuario sem necessidade de autorização
 ```json
 [
   {
-    "url": "https://demos-kenzie-academy-brasil.s3.amazonaws.com/mar22/m3/Sprint_1/GMT20220719-123327_Recording_1760x900.mp4",
+    "url": "https://demos-kenzie-academy-brasil.s3.amazonaws.com/mar22/m3/Sprint_1/GMT20220718-123537_Recording_1920x1080.mp4",
+    "sprintId": 2,
+    "day": "segunda",
+    "extra": false,
+    "moduleId": 3,
     "userId": 3,
-    "marks ": [
+    "created_at": "18/07/22",
+    "updated_at": "05/09/22",
+    "marks": [
       {
-        "time_video": "04:25",
+        "id": "1",
+        "time_video": "02:30",
         "title": "react-js222"
       },
       {
-        "time_video": "10:15",
+        "id": 2,
+        "time_video": "04:30",
         "title": "json-server"
       }
     ],
-    "id": 5
-  },
-  {
-    "url": "https://demos-kenzie-academy-brasil.s3.amazonaws.com/mar22/m3/Sprint_1/GMT20220719-123327_Recording_1760x900.mp4",
+    "id": 1
+  }
+
+    {
+    "url": "https://demos-kenzie-academy-brasil.s3.amazonaws.com/mar22/m3/Sprint_1/GMT20220718-123537_Recording_1920x1080.mp4",
+    "sprintId": 2,
+    "day": "segunda",
+    "extra": false,
+    "moduleId": 3,
     "userId": 3,
-    "marks ": [
+    "created_at": "18/07/22",
+    "updated_at": "05/09/22",
+    "marks": [
       {
-        "time_video": "04:25",
+        "id": "1",
+        "time_video": "02:30",
         "title": "react-js222"
       },
       {
-        "time_video": "10:15",
+        "id": 2,
+        "time_video": "04:30",
         "title": "json-server"
       }
     ],
-    "id": 6
+    "id": 2
   }
 ]
 ```
