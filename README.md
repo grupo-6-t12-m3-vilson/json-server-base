@@ -16,10 +16,7 @@ https://api-time-stamp.herokuapp.com
 ```json
 {
   "email": "m1@intrutor.com",
-  "password": "intrutor@$123456",
-  "name": "Instrutor M1",
-  "module": 1,
-  "isAdmin": true
+  "password": "intrutor@$123456"
 }
 ```
 
