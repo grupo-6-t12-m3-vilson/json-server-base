@@ -1,40 +1,125 @@
 {
   "users": [
     {
-      "email": "kenzinho@mail.com",
-      "password": "$2a$10$YQiiz0ANVwIgpOjYXPxc0O9H2XeX3m8OoY1xk7OGgxTnOJnsZU7FO",
-      "name": "Kenzinho",
-      "age": 38,
+      "email": "m1@intrutor.com",
+      "password": "$2a$10$vCJZEmxipKqmKqvUX0gZ8erfvxS3NKY.8i65O2Rphi6rkekJsfc7y",
+      "name": "Instrutor M1",
+      "module": 1,
+      "isAdmin": true,
       "id": 1
     },
     {
-      "email": "instrutor@email.com",
-      "password": "$2a$10$rOZ1tQOPMpCfFmCYTB/d8uGv60hutISTj7S69SLV.GdSyfK3WW/qK",
-      "module": "2",
+      "email": "m2@intrutor.com",
+      "password": "$2a$10$Y6rheyPyAGi2/VhakV5uDesJG99Yiy.Wemldvr3kCcjd.qeji6p3m",
+      "name": "Instrutor M2",
+      "module": 2,
+      "isAdmin": true,
       "id": 2
+    },
+    {
+      "email": "m3@intrutor.com",
+      "password": "$2a$10$/Y6fRqh4xzrVT4ScKzF7re6fvhYIK.S2yHhQmx/TpNNE05HTRyvNW",
+      "name": "Instrutor M3",
+      "module": 3,
+      "isAdmin": true,
+      "id": 3
+    },
+    {
+      "email": "m4@intrutor.com",
+      "password": "$2a$10$jB7q84d9Nn1YedMRYp1uU.FNMNJjX24SR0gCN9UeIPNm4.Sm08RMG",
+      "name": "Instrutor M4",
+      "module": 4,
+      "isAdmin": true,
+      "id": 4
+    },
+    {
+      "email": "m5@intrutor.com",
+      "password": "$2a$10$qALb9kdNA/eIwbm2/BDjLuLW.xUbu1lCwbroFCdcsKlN5GFtCTBLu",
+      "name": "Instrutor M5",
+      "module": 5,
+      "isAdmin": true,
+      "id": 5
+    },
+    {
+      "email": "m6@intrutor.com",
+      "password": "$2a$10$MWRUaf8w3LRfnrDkGG/0B.gA.IG1lcgzZt68jen3ZRHnSuub099vW",
+      "name": "Instrutor M6",
+      "module": 6,
+      "isAdmin": true,
+      "id": 6
+    },
+    {
+      "email": "m1@aluno.com",
+      "password": "$2a$10$ZAy9eK5aDBtyDbzVQW0JjutfVBdvOoXqyeEmW9F3FjqKvvXu1.ydy",
+      "name": "Aluno M1",
+      "module": 1,
+      "isAdmin": false,
+      "id": 7
+    },
+    {
+      "email": "m2@aluno.com",
+      "password": "$2a$10$G4k3n81oxebvbwmbiJiii.r817KnPbUjy/jZk1v/JO9Bq7utHo8ZS",
+      "name": "Aluno M2",
+      "module": 2,
+      "isAdmin": false,
+      "id": 8
+    },
+    {
+      "email": "m3@aluno.com",
+      "password": "$2a$10$S7EcZvxFD4GvX6A0FTsy1O0khZmPkGhH7lesjXsgehxaY7t5Znfxe",
+      "name": "Aluno M3",
+      "module": 3,
+      "isAdmin": false,
+      "id": 9
+    },
+    {
+      "email": "m4@aluno.com",
+      "password": "$2a$10$aGYy/6UxxKTwrZsMwarNYeYZ8H0QPibYMZKXg6Rglq5m28tsxt7o6",
+      "name": "Aluno M4",
+      "module": 4,
+      "isAdmin": false,
+      "id": 10
+    },
+    {
+      "email": "m5@aluno.com",
+      "password": "$2a$10$PehQTE0BV.6YbcSArfmbIecZYQKS4UI78wBlUBz5br6Uthm2oW7am",
+      "name": "Aluno M5",
+      "module": 5,
+      "isAdmin": false,
+      "id": 11
+    },
+    {
+      "email": "m6@aluno.com",
+      "password": "$2a$10$pcd/pXLtFlopfDwq78tlUONqL1XpLAN/xuf8zz1fiXAMnEMFlL7N.",
+      "name": "Aluno M6",
+      "module": 6,
+      "isAdmin": false,
+      "id": 12
     }
   ],
   "videos": [
     {
-      "url": "https://demos-kenzie-academy-brasil.s3.amazonaws.com/mar22/m3/Sprint_1/GMT20220719-123327_Recording_1760x900.mp4",
-      "bookmarks": "15:25",
-      "title": "Falando sobre churros",
-      "userId": 2,
+      "url": "https://demos-kenzie-academy-brasil.s3.amazonaws.com/mar22/m3/Sprint_1/GMT20220718-123537_Recording_1920x1080.mp4",
+      "sprintId": 1,
+      "day": "segunda",
+      "extra": false,
+      "moduleId": 3,
+      "userId": 3,
+      "created_at": "18/07/22",
+      "updated_at": "05/09/22",
+      "marks": [
+        {
+          "id": "1",
+          "time_video": "02:30",
+          "title": "react-js222"
+        },
+        {
+          "id": 2,
+          "time_video": "04:30",
+          "title": "json-server"
+        }
+      ],
       "id": 1
-    },
-    {
-      "url": "https://demos-kenzie-academy-brasil.s3.amazonaws.com",
-      "bookmarks": "10:00, 29:00",
-      "title": "Falando sobre churros, Aprendendo a fazer churros",
-      "userId": 2,
-      "id": 2
-    },
-    {
-      "url": "https://demos-kenzie-academy-brasil.s3.amazonaws.com",
-      "bookmarks": " 35:00",
-      "title": "Criando uma pagina para vender seus churros",
-      "userId": 2,
-      "id": 3
     }
   ]
 }

@@ -15,8 +15,11 @@ https://api-time-stamp.herokuapp.com
 
 ```json
 {
-  "email": "user@mail.com",
-  "password": "senha123"
+  "email": "m1@intrutor.com",
+  "password": "intrutor@$123456",
+  "name": "Instrutor M1",
+  "module": 1,
+  "isAdmin": true
 }
 ```
 
@@ -26,11 +29,12 @@ Caso dê tudo certo, a resposta será assim:
 
 ```json
 {
-  "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imluc3RydXRvckBtYWlsLmNvbSIsImlhdCI6MTY2MTk0ODEzMiwiZXhwIjoxNjYxOTUxNzMyLCJzdWIiOiIzIn0.7zzLwKWHqtefUneP5JhyIp-iVFVFwtIw8_L5C21sw8U",
+  "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im0xQGludHJ1dG9yLmNvbSIsImlhdCI6MTY2MjQyNzgzOCwiZXhwIjoxNjYyNDMxNDM4LCJzdWIiOiIzIn0.yPOWfkHfR1qQl5R0gtUJGZCgj_R4vVgNmFhwieMACG0",
   "user": {
-    "email": "instrutor@mail.com",
-    "name": "Naruto",
-    "age": 38,
+    "email": "m1@intrutor.com",
+    "name": "Instrutor M1",
+    "module": 1,
+    "isAdmin": true,
     "id": 3
   }
 }
@@ -147,6 +151,36 @@ Retorna todos os videos criados pelo usuario sem necessidade de autorização
 ]
 ```
 
+`GET /videos?moduleId=3&&sprintId=2`
+
+```json
+[
+  {
+    "url": "https://demos-kenzie-academy-brasil.s3.amazonaws.com/mar22/m3/Sprint_1/GMT20220718-123537_Recording_1920x1080.mp4",
+    "sprintId": 2,
+    "day": "segunda",
+    "extra": false,
+    "moduleId": 3,
+    "userId": 3,
+    "created_at": "18/07/22",
+    "updated_at": "05/09/22",
+    "marks": [
+      {
+        "id": "1",
+        "time_video": "02:30",
+        "title": "react-js222"
+      },
+      {
+        "id": 2,
+        "time_video": "04:30",
+        "title": "json-server"
+      }
+    ],
+    "id": 1
+  }
+]
+```
+
 ## Rotas que necessitam de autorização
 
 A partir daqui, todas as rotas necessitam de autenticação
@@ -155,62 +189,29 @@ Rotas que necessitam de autorização deve ser informado no cabeçalho da requis
 
 > Authorization: Bearer {token}
 
-<h2 align ='center'> Acessar usuário </h2>
-
-`GET /users/:id -`
-
-```json
-{
- "Não há necessidade de passar nada como parametro"
-}
-```
-
-`FORMATO DA RESPOSTA - STATUS 200`
-
-```json
-{
-  "email": "user@email.com",
-  "password": "$2a$10$8DKEi3y79/MUeI20UD6EFuoRDCMYwFUmeg1OWwXIakydT9eTBVYf2",
-  "module": "3",
-  "id": 2
-}
-```
-
-<h2 align ='center'> Possíveis erros </h2>
-
-Caso não tenha informado o token, irá retornar:
-
-`FORMATO DA RESPOSTA - STATUS 401`
-
-```json
-{
-"Missing token"
-}
-```
-
-Caso não tenha sido informado o ID
-
-`FORMATO DA RESPOSTA - STATUS 403`
-
-```json
-{"Private resource access: entity must have a reference to the owner id"}
-```
-
 <h2 align ='center'> Cadastrar vídeos </h2>
 
 `POST /videos`
 
 ```json
 {
-  "url": "https://demos-kenzie-academy-brasil.s3.amazonaws.com/mar22/m3/Sprint_1/GMT20220719-123327_Recording_1760x900.mp4",
+  "url": "https://demos-kenzie-academy-brasil.s3.amazonaws.com/mar22/m3/Sprint_1/GMT20220718-123537_Recording_1920x1080.mp4",
+  "sprintId": 1,
+  "day": "segunda",
+  "extra": false,
+  "moduleId": 3,
   "userId": 3,
-  "marks ": [
+  "created_at": "18/07/22",
+  "updated_at": "05/09/22",
+  "marks": [
     {
-      "time_video": "04:25",
+      "id": "1",
+      "time_video": "02:30",
       "title": "react-js222"
     },
     {
-      "time_video": "10:15",
+      "id": 2,
+      "time_video": "04:30",
       "title": "json-server"
     }
   ]
@@ -221,68 +222,45 @@ Caso não tenha sido informado o ID
 
 ```json
 {
-  "url": "https://demos-kenzie-academy-brasil.s3.amazonaws.com/mar22/m3/Sprint_1/GMT20220719-123327_Recording_1760x900.mp4",
+  "url": "https://demos-kenzie-academy-brasil.s3.amazonaws.com/mar22/m3/Sprint_1/GMT20220718-123537_Recording_1920x1080.mp4",
+  "sprintId": 1,
+  "day": "segunda",
+  "extra": false,
+  "moduleId": 3,
   "userId": 3,
-  "marks ": [
+  "created_at": "18/07/22",
+  "updated_at": "05/09/22",
+  "marks": [
     {
-      "time_video": "04:25",
+      "id": "1",
+      "time_video": "02:30",
       "title": "react-js222"
     },
     {
-      "time_video": "10:15",
+      "id": 2,
+      "time_video": "04:30",
       "title": "json-server"
     }
   ],
-  "id": 5
+  "id": 1
 }
 ```
 
-`GET /users/:id/videos`
-
-Caso dê tudo certo, irá retornar
-
-`FORMATO DA RESPOSTA - STATUS 200`
-
-```json
-[
-  {
-    "url": "https://demos-kenzie-academy-brasil.s3.amazonaws.com/mar22/m3/Sprint_1/GMT20220719-123327_Recording_1760x900.mp4",
-    "userId": 2,
-    "marks ": [
-      {
-        "time_video": "04:25",
-        "title": "react-js222"
-      },
-      {
-        "time_video": "10:15",
-        "title": "json-server"
-      }
-    ],
-    "id": 4
-  }
-    {
-    "url": "https://demos-kenzie-academy-brasil.s3.amazonaws.com/mar22/m3/Sprint_1/GMT20220719-123327_Recording_1760x900.mp4",
-    "userId": 2,
-    "marks ": [
-      {
-        "time_video": "14:25",
-        "title": "react-js252"
-      },
-      {
-        "time_video": "19:15",
-        "title": "json-auth"
-      }
-    ],
-    "id": 5
-  }
-]
-```
-
-`PATCH /videos/:idVideo`
+`PUT /videos/:id`
 
 ```json
 {
-  "bookmarks": "03:48, 15:25"
+   "marks": [
+    {
+      "id": "1",
+      "time_video": "02:50",
+      "title": "react-js232"
+    },
+    {
+      "id": 2,
+      "time_video": "05:10",
+      "title": "json-server"
+    }
 }
 ```
 
@@ -291,18 +269,32 @@ Caso dê tudo certo, irá retornar
 `FORMATO DA RESPOSTA - STATUS 200`
 
 ```json
-[
-  {
-    "url": "https://demos-kenzie-academy-brasil.s3.amazonaws.com/mar22/m3/Sprint_1/GMT20220719-123327_Recording_1760x900.mp4",
-    "bookmarks": "03:48, 15:25",
-    "title": "Abordando sobre useEffect, Abordando sobre useState",
-    "userId": 4,
-    "id": 1
-  }
-]
+{
+  "url": "https://demos-kenzie-academy-brasil.s3.amazonaws.com/mar22/m3/Sprint_1/GMT20220718-123537_Recording_1920x1080.mp4",
+  "sprintId": 1,
+  "day": "segunda",
+  "extra": false,
+  "moduleId": 3,
+  "userId": 3,
+  "created_at": "18/07/22",
+  "updated_at": "06/09/22",
+  "marks": [
+    {
+      "id": "1",
+      "time_video": "02:50",
+      "title": "react-js232"
+    },
+    {
+      "id": 2,
+      "time_video": "05:10",
+      "title": "json-server"
+    }
+  ],
+  "id": 1
+}
 ```
 
-`DELETE /videos/:idVideo`
+`DELETE /videos/:id`
 
 ```json
 {}
