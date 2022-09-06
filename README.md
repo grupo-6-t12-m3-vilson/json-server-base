@@ -307,6 +307,7 @@ Rotas que necessitam de autorização deve ser informado no cabeçalho da requis
       "time_video": "05:10",
       "title": "json-server"
     }
+    ]
 }
 ```
 
