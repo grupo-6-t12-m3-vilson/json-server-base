@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "email": "m1@intrutor.com",
+      "email": "m1@instrutor.com",
       "password": "$2a$10$vCJZEmxipKqmKqvUX0gZ8erfvxS3NKY.8i65O2Rphi6rkekJsfc7y",
       "name": "Instrutor M1",
       "module": 1,
@@ -9,7 +9,7 @@
       "id": 1
     },
     {
-      "email": "m2@intrutor.com",
+      "email": "m2@instrutor.com",
       "password": "$2a$10$Y6rheyPyAGi2/VhakV5uDesJG99Yiy.Wemldvr3kCcjd.qeji6p3m",
       "name": "Instrutor M2",
       "module": 2,
@@ -17,7 +17,7 @@
       "id": 2
     },
     {
-      "email": "m3@intrutor.com",
+      "email": "m3@instrutor.com",
       "password": "$2a$10$/Y6fRqh4xzrVT4ScKzF7re6fvhYIK.S2yHhQmx/TpNNE05HTRyvNW",
       "name": "Instrutor M3",
       "module": 3,
@@ -25,7 +25,7 @@
       "id": 3
     },
     {
-      "email": "m4@intrutor.com",
+      "email": "m4@instrutor.com",
       "password": "$2a$10$jB7q84d9Nn1YedMRYp1uU.FNMNJjX24SR0gCN9UeIPNm4.Sm08RMG",
       "name": "Instrutor M4",
       "module": 4,
@@ -33,7 +33,7 @@
       "id": 4
     },
     {
-      "email": "m5@intrutor.com",
+      "email": "m5@instrutor.com",
       "password": "$2a$10$qALb9kdNA/eIwbm2/BDjLuLW.xUbu1lCwbroFCdcsKlN5GFtCTBLu",
       "name": "Instrutor M5",
       "module": 5,
@@ -41,7 +41,7 @@
       "id": 5
     },
     {
-      "email": "m6@intrutor.com",
+      "email": "m6@instrutor.com",
       "password": "$2a$10$MWRUaf8w3LRfnrDkGG/0B.gA.IG1lcgzZt68jen3ZRHnSuub099vW",
       "name": "Instrutor M6",
       "module": 6,
