@@ -2,7 +2,7 @@
   "users": [
     {
       "email": "m1@instrutor.com",
-      "password": "$2a$10$vCJZEmxipKqmKqvUX0gZ8erfvxS3NKY.8i65O2Rphi6rkekJsfc7y",
+      "password": "$2a$10$AuDoIQ8t7pZp0OtAhL/38OwP3lcIvSKvBgSlmDySfY3DqdCig2lfa",
       "name": "Instrutor M1",
       "module": 1,
       "isAdmin": true,
@@ -10,7 +10,7 @@
     },
     {
       "email": "m2@instrutor.com",
-      "password": "$2a$10$Y6rheyPyAGi2/VhakV5uDesJG99Yiy.Wemldvr3kCcjd.qeji6p3m",
+      "password": "$2a$10$i5J/jX2kdiuRxYp8lFtELuyzHf2AvaW3bP2SUgcFOIIdTnByOY.oi",
       "name": "Instrutor M2",
       "module": 2,
       "isAdmin": true,
@@ -18,7 +18,7 @@
     },
     {
       "email": "m3@instrutor.com",
-      "password": "$2a$10$/Y6fRqh4xzrVT4ScKzF7re6fvhYIK.S2yHhQmx/TpNNE05HTRyvNW",
+      "password": "$2a$10$bUj6Se7FxJ/a/fT9cZ2I5evSTaOplA8dECpOeeOP5oEolr8g9Csdm",
       "name": "Instrutor M3",
       "module": 3,
       "isAdmin": true,
@@ -26,7 +26,7 @@
     },
     {
       "email": "m4@instrutor.com",
-      "password": "$2a$10$jB7q84d9Nn1YedMRYp1uU.FNMNJjX24SR0gCN9UeIPNm4.Sm08RMG",
+      "password": "$2a$10$WxtFgFpAFx27mFgxphn1Z.vAxuiPxM1GzsD4XvcPTOk8H58XilzyS",
       "name": "Instrutor M4",
       "module": 4,
       "isAdmin": true,
@@ -34,7 +34,7 @@
     },
     {
       "email": "m5@instrutor.com",
-      "password": "$2a$10$qALb9kdNA/eIwbm2/BDjLuLW.xUbu1lCwbroFCdcsKlN5GFtCTBLu",
+      "password": "$2a$10$L1bfk8hy6PXUyUaJHbY4be8/.9eevKgodwtl8MhVN5su/m/lElzKC",
       "name": "Instrutor M5",
       "module": 5,
       "isAdmin": true,
@@ -42,7 +42,7 @@
     },
     {
       "email": "m6@instrutor.com",
-      "password": "$2a$10$MWRUaf8w3LRfnrDkGG/0B.gA.IG1lcgzZt68jen3ZRHnSuub099vW",
+      "password": "$2a$10$3m1D.MR2rE6C5ozEg18I8OqMXMDf6IpEpM52cBhG/6lZtGBF0DJBC",
       "name": "Instrutor M6",
       "module": 6,
       "isAdmin": true,
@@ -50,7 +50,7 @@
     },
     {
       "email": "m1@aluno.com",
-      "password": "$2a$10$ZAy9eK5aDBtyDbzVQW0JjutfVBdvOoXqyeEmW9F3FjqKvvXu1.ydy",
+      "password": "$2a$10$VsrKk66vgVG1Qh/QBeRXb.6jylsjipZCrbGBQhRg8xRjI8tiZ.pDy",
       "name": "Aluno M1",
       "module": 1,
       "isAdmin": false,
@@ -58,7 +58,7 @@
     },
     {
       "email": "m2@aluno.com",
-      "password": "$2a$10$G4k3n81oxebvbwmbiJiii.r817KnPbUjy/jZk1v/JO9Bq7utHo8ZS",
+      "password": "$2a$10$11NQR.FH/FccfOdSGsWtYOxUHwbXi0PwJsyhE7vRu50FqhvLbo59u",
       "name": "Aluno M2",
       "module": 2,
       "isAdmin": false,
@@ -66,7 +66,7 @@
     },
     {
       "email": "m3@aluno.com",
-      "password": "$2a$10$S7EcZvxFD4GvX6A0FTsy1O0khZmPkGhH7lesjXsgehxaY7t5Znfxe",
+      "password": "$2a$10$vcyNV1UuMytmqo3QeGS8d.ZsHVgYu5WX.CAJv4uuuDEyBjCpQWW/2",
       "name": "Aluno M3",
       "module": 3,
       "isAdmin": false,
@@ -74,7 +74,7 @@
     },
     {
       "email": "m4@aluno.com",
-      "password": "$2a$10$aGYy/6UxxKTwrZsMwarNYeYZ8H0QPibYMZKXg6Rglq5m28tsxt7o6",
+      "password": "$2a$10$iT.zQquCf8OZ8cm88P38tuIbQJmoXTEseqPAhpppfaVXdTtbrV53q",
       "name": "Aluno M4",
       "module": 4,
       "isAdmin": false,
@@ -82,7 +82,7 @@
     },
     {
       "email": "m5@aluno.com",
-      "password": "$2a$10$PehQTE0BV.6YbcSArfmbIecZYQKS4UI78wBlUBz5br6Uthm2oW7am",
+      "password": "$2a$10$0Yybwu1HHTNO2g4rHT/s8eiwD9XdViKvwf3z7s3CZH1qHHriJ3L5i",
       "name": "Aluno M5",
       "module": 5,
       "isAdmin": false,
@@ -90,7 +90,7 @@
     },
     {
       "email": "m6@aluno.com",
-      "password": "$2a$10$pcd/pXLtFlopfDwq78tlUONqL1XpLAN/xuf8zz1fiXAMnEMFlL7N.",
+      "password": "$2a$10$Kox2wcWGOd81dv7ewWtLrugr2fw4KPn0.I6GAO0j1rqdJizLUEVpm",
       "name": "Aluno M6",
       "module": 6,
       "isAdmin": false,
