@@ -100,8 +100,9 @@
   "videos": [
     {
       "url": "https://demos-kenzie-academy-brasil.s3.amazonaws.com/mar22/m3/Sprint_1/GMT20220718-123537_Recording_1920x1080.mp4",
+      "name": "Onboarding e Primeiros Passos no React",
       "sprintId": 1,
-      "day": "segunda",
+      "day": "Segunda-feira",
       "extra": false,
       "moduleId": 3,
       "userId": 3,
@@ -109,9 +110,9 @@
       "updated_at": "05/09/22",
       "marks": [
         {
-          "id": "1",
-          "time_video": "02:30",
-          "title": "react-js222"
+          "id": 1,
+          "time_video": "00:10",
+          "title": "Bem-Vindo, ao React!"
         },
         {
           "id": 2,
@@ -120,6 +121,149 @@
         }
       ],
       "id": 1
+    },
+    {
+      "url": "https://demos-kenzie-academy-brasil.s3.amazonaws.com/mar22/m3/Sprint_1/GMT20220719-123327_Recording_1760x900.mp4",
+      "name": "Componentizando com props e children",
+      "sprintId": 1,
+      "day": "Terça-feira",
+      "extra": false,
+      "moduleId": 3,
+      "userId": 3,
+      "created_at": "19/07/22",
+      "updated_at": "07/09/22",
+      "marks": [
+        {
+          "id": 1,
+          "time_video": "50:20",
+          "title": "React"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "url": "https://demos-kenzie-academy-brasil.s3.amazonaws.com/mar22/m3/Sprint_1/GMT20220720-123353_Recording_1760x900.mp4",
+      "name": "Use State e Imutabilidade",
+      "sprintId": 1,
+      "day": "Quarta-feira",
+      "extra": false,
+      "moduleId": 3,
+      "userId": 3,
+      "created_at": "20/07/22",
+      "updated_at": "07/09/22",
+      "marks": [
+        {
+          "id": 1,
+          "time_video": "26:10",
+          "title": "Form, useState"
+        }
+      ],
+      "id": 3
+    },
+    {
+      "url": "https://demos-kenzie-academy-brasil.s3.amazonaws.com/mar22/m3/Sprint_1/GMT20220721-123411_Recording_1760x900.mp4",
+      "name": "Conditional Render",
+      "sprintId": 1,
+      "day": "Quinta-feira",
+      "extra": false,
+      "moduleId": 3,
+      "userId": 3,
+      "created_at": "21/07/22",
+      "updated_at": "07/09/22",
+      "marks": [
+        {
+          "id": 1,
+          "time_video": "00:16",
+          "title": "Recados"
+        },
+        {
+          "id": 2,
+          "time_video": "49:50",
+          "title": "slido"
+        }
+      ],
+      "id": 4
+    },
+    {
+      "url": "https://demos-kenzie-academy-brasil.s3.amazonaws.com/mar22/m3/Sprint_1/GMT20220722-123352_Recording_1760x900.mp4",
+      "name": "Revisão Sprint 1",
+      "sprintId": 1,
+      "day": "Sexta-feira",
+      "extra": false,
+      "moduleId": 3,
+      "userId": 3,
+      "created_at": "22/07/22",
+      "updated_at": "09/09/22",
+      "marks": [
+        {
+          "id": 1,
+          "time_video": "04:00",
+          "title": "yarn create"
+        },
+        {
+          "id": 2,
+          "time_video": "43:00",
+          "title": "props"
+        }
+      ],
+      "id": 5
+    },
+    {
+      "url": "https://demos-kenzie-academy-brasil.s3.amazonaws.com/mar22/m3/Sprint_2/video1861317007.mp4",
+      "name": "Styles Modules e Styled Components",
+      "sprintId": 2,
+      "day": "Segunda-feira",
+      "extra": false,
+      "moduleId": 3,
+      "userId": 3,
+      "created_at": "25/07/22",
+      "updated_at": "09/09/22",
+      "marks": [
+        {
+          "id": 1,
+          "time_video": "06:00",
+          "title": "className: Container"
+        }
+      ],
+      "id": 6
+    },
+    {
+      "url": "https://demos-kenzie-academy-brasil.s3.amazonaws.com/mar22/m3/Sprint_2/GMT20220726-123330_Recording_1920x1080.mp4",
+      "name": "Curso Soft Skills - Aula 1",
+      "sprintId": 2,
+      "day": "Terça-feira",
+      "extra": false,
+      "moduleId": 3,
+      "userId": 3,
+      "created_at": "26/07/22",
+      "updated_at": "09/09/22",
+      "marks": [
+        {
+          "id": 1,
+          "time_video": "19:19",
+          "title": "Gerir o tempo funciona?"
+        }
+      ],
+      "id": 7
+    },
+    {
+      "url": "https://demos-kenzie-academy-brasil.s3.amazonaws.com/mar22/m3/Sprint_2/GMT20220727-123123_Recording_1760x900.mp4",
+      "name": "Introdução useEffect",
+      "sprintId": 2,
+      "day": "Quarta-feira",
+      "extra": false,
+      "moduleId": 3,
+      "userId": 3,
+      "created_at": "27/07/22",
+      "updated_at": "09/09/22",
+      "marks": [
+        {
+          "id": 1,
+          "time_video": "12:15",
+          "title": "useEffect"
+        }
+      ],
+      "id": 8
     }
   ]
 }
